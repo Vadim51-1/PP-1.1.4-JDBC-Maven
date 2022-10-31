@@ -1,5 +1,30 @@
 package jm.task.core.jdbc.util;
 
+import org.hibernate.mapping.Collection;
+
+import java.sql.*;
+
 public class Util {
-    // реализуйте настройку соеденения с БД
+    public static final String URL = "jdbc:mysql://localhost:3306/mydbtest";
+    public static final String USERNAME = "root";
+    public static final String PASWORD = "root1";
+
+    public static Connection getConnection() {
+        Connection connection = null;
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            connection = DriverManager.getConnection(URL, USERNAME, PASWORD);
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+
+        }
+        return connection;
+    }
 }
+
+
+
+
+
+
+
