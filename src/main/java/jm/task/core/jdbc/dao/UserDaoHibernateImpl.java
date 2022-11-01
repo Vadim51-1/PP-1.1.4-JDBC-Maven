@@ -8,6 +8,7 @@ public class UserDaoHibernateImpl implements UserDao {
     public UserDaoHibernateImpl() {
 
     }
+
     @Override
     public void createUsersTable() {
 
@@ -27,6 +28,7 @@ public class UserDaoHibernateImpl implements UserDao {
     public void removeUserById(long id) {
 
     }
+
     @Override
     public List<User> getAllUsers() {
         return null;
