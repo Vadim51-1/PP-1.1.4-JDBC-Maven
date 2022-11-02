@@ -1,7 +1,5 @@
 package jm.task.core.jdbc.util;
 
-import org.hibernate.mapping.Collection;
-
 import java.sql.*;
 
 public class Util {
@@ -20,7 +18,9 @@ public class Util {
         }
         return connection;
     }
+
 }
+
 
 
 

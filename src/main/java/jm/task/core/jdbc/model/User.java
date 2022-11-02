@@ -1,22 +1,20 @@
 package jm.task.core.jdbc.model;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Objects;
 
-@Table
+
 public class User {
     @Id
     private Long id;
 
-    @Column
+
     private String name;
 
-    @Column
+
     private String lastName;
 
-    @Column
+
     private Byte age;
 
     public User() {
@@ -57,10 +55,10 @@ public class User {
         return age;
     }
 
-    @Override
-    public String toString() {
-        return "id=" + id + "  name=" + name + "  lastName=" + lastName + "  age=" + age;
+    public void setAge(Byte age) {
+        this.age = age;
     }
+
 
     @Override
     public boolean equals(Object o) {
@@ -75,7 +73,9 @@ public class User {
         return Objects.hash(id, name, lastName, age);
     }
 
-    public void setAge(Byte age) {
-        this.age = age;
+
+    @Override
+    public String toString() {
+        return "id=" + id + "  name=" + name + "  lastName=" + lastName + "  age=" + age;
     }
 }
